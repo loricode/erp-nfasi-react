@@ -1,13 +1,14 @@
 import { authService } from "../../../application/container";
+import { FloatingInput } from "../../components/inputs/FloatingInput";
 import { useLogin } from "../../hook/useLogin";
 
-export const LoginPage = () => {
+export  default function LoginPage(){
 
     const { handleChange, handleLogin } = useLogin(authService);
 
     return (
         <>
-            <input name="email" onChange={handleChange} />
+            <FloatingInput value="" label="Email" onChange={handleChange} />
             <input name="password" type="password" onChange={handleChange} />
             <button onClick={handleLogin}>Login</button>
         </>
