@@ -1,11 +1,12 @@
-import './App.css'
-import { LoginPage } from './presentation/pages/auth/LoginPage'
-
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './core/AppRouter';
 function App() {
  
   return (
     <>
-       <LoginPage/>             
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>           
     </>
   )
 }

@@ -7,7 +7,6 @@ interface UiState {
 
 export const useUiStore = create<UiState>((set) => ({
   loading: {},
-
   setLoading: (key, value) =>
     set((state) => ({
       loading: {
